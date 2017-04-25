@@ -63,33 +63,6 @@
 
         </li>
 
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.npm-scripts-gui.terminalLogger">
-            function <span class="apidocSignatureSpan">npm-scripts-gui.</span>terminalLogger
-            <span class="apidocSignatureSpan">(message)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.npm-scripts-gui.themeConfig">
-            function <span class="apidocSignatureSpan">npm-scripts-gui.</span>themeConfig
-            <span class="apidocSignatureSpan">(configObj)</span>
-            </a>
-
-        </li>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.npm-scripts-gui.watchConfig">
-            function <span class="apidocSignatureSpan">npm-scripts-gui.</span>watchConfig
-            <span class="apidocSignatureSpan">(watchObj)</span>
-            </a>
-
-        </li>
-
     </ol></li>
 
     <li class="apidocModuleLi"><a href="#apidoc.module.npm-scripts-gui.rand">module npm-scripts-gui.rand</a><ol>
@@ -141,45 +114,6 @@
 
     </ol></li>
 
-    <li class="apidocModuleLi"><a href="#apidoc.module.npm-scripts-gui.terminalLogger">module npm-scripts-gui.terminalLogger</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.npm-scripts-gui.terminalLogger.terminalLogger">
-            function <span class="apidocSignatureSpan">npm-scripts-gui.</span>terminalLogger
-            <span class="apidocSignatureSpan">(message)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.npm-scripts-gui.themeConfig">module npm-scripts-gui.themeConfig</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.npm-scripts-gui.themeConfig.themeConfig">
-            function <span class="apidocSignatureSpan">npm-scripts-gui.</span>themeConfig
-            <span class="apidocSignatureSpan">(configObj)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
-    <li class="apidocModuleLi"><a href="#apidoc.module.npm-scripts-gui.watchConfig">module npm-scripts-gui.watchConfig</a><ol>
-
-        <li>
-
-            <a class="apidocElementLiA" href="#apidoc.element.npm-scripts-gui.watchConfig.watchConfig">
-            function <span class="apidocSignatureSpan">npm-scripts-gui.</span>watchConfig
-            <span class="apidocSignatureSpan">(watchObj)</span>
-            </a>
-
-        </li>
-
-    </ol></li>
-
 </ol></div>
 
 <div class="apidocSectionDiv">
@@ -204,77 +138,6 @@
 
 		return randomChars;
 	}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.npm-scripts-gui.terminalLogger" id="apidoc.element.npm-scripts-gui.terminalLogger">
-        function <span class="apidocSignatureSpan">npm-scripts-gui.</span>terminalLogger
-        <span class="apidocSignatureSpan">(message)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">terminalLogger = function (message) {
-  var logSpawn = (0, _child_process.spawn)('echo', [message], {
-    cwd: process.cwd(),
-    stdio: 'inherit'
-  });
-
-  logSpawn.on('exit', function (error) {
-    logSpawn.kill();
-  });
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.npm-scripts-gui.themeConfig" id="apidoc.element.npm-scripts-gui.themeConfig">
-        function <span class="apidocSignatureSpan">npm-scripts-gui.</span>themeConfig
-        <span class="apidocSignatureSpan">(configObj)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function setTheme(configObj) {
-	var themeName = configObj.theme.name;
-
-	var selectedTheme = themes[themeName] ? themeName : 'light';
-	var themePath = _path2.default.join(themesPath, selectedTheme + '.css');
-
-	configObj.theme.logoPath = themes[selectedTheme].logoPath;
-	configObj.theme.primarySpinnerPath = themes[selectedTheme].primarySpinnerPath;
-	configObj.theme.secondarySpinnerPath = themes[selectedTheme].secondarySpinnerPath;
-
-	_fs2.default.readFile(themePath, 'utf8', function (err, data) {
-		if (err) return alert('Error. Could not load theme file.');
-
-		var styleTag = window.document.createElement('style');
-		styleTag.textContent = data;
-
-		window.document.getElementById('head').appendChild(styleTag);
-	});
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-
-    <h2>
-        <a href="#apidoc.element.npm-scripts-gui.watchConfig" id="apidoc.element.npm-scripts-gui.watchConfig">
-        function <span class="apidocSignatureSpan">npm-scripts-gui.</span>watchConfig
-        <span class="apidocSignatureSpan">(watchObj)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function parseWatchObject(watchObj) {
-	if (!watchObj) return;
-	Object.keys(watchObj).forEach(function (pattern) {
-		createWatcher(pattern.trim(), watchObj[pattern].trim());
-	});
-}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
@@ -363,92 +226,6 @@
     <li>description and source-code<pre class="apidocCodePre">string = function (length) {
 		return rand(length, 'alphaNumeric');
 	}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.npm-scripts-gui.terminalLogger" id="apidoc.module.npm-scripts-gui.terminalLogger">module npm-scripts-gui.terminalLogger</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.npm-scripts-gui.terminalLogger.terminalLogger" id="apidoc.element.npm-scripts-gui.terminalLogger.terminalLogger">
-        function <span class="apidocSignatureSpan">npm-scripts-gui.</span>terminalLogger
-        <span class="apidocSignatureSpan">(message)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">terminalLogger = function (message) {
-  var logSpawn = (0, _child_process.spawn)('echo', [message], {
-    cwd: process.cwd(),
-    stdio: 'inherit'
-  });
-
-  logSpawn.on('exit', function (error) {
-    logSpawn.kill();
-  });
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.npm-scripts-gui.themeConfig" id="apidoc.module.npm-scripts-gui.themeConfig">module npm-scripts-gui.themeConfig</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.npm-scripts-gui.themeConfig.themeConfig" id="apidoc.element.npm-scripts-gui.themeConfig.themeConfig">
-        function <span class="apidocSignatureSpan">npm-scripts-gui.</span>themeConfig
-        <span class="apidocSignatureSpan">(configObj)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function setTheme(configObj) {
-	var themeName = configObj.theme.name;
-
-	var selectedTheme = themes[themeName] ? themeName : 'light';
-	var themePath = _path2.default.join(themesPath, selectedTheme + '.css');
-
-	configObj.theme.logoPath = themes[selectedTheme].logoPath;
-	configObj.theme.primarySpinnerPath = themes[selectedTheme].primarySpinnerPath;
-	configObj.theme.secondarySpinnerPath = themes[selectedTheme].secondarySpinnerPath;
-
-	_fs2.default.readFile(themePath, 'utf8', function (err, data) {
-		if (err) return alert('Error. Could not load theme file.');
-
-		var styleTag = window.document.createElement('style');
-		styleTag.textContent = data;
-
-		window.document.getElementById('head').appendChild(styleTag);
-	});
-}</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
-    </ul>
-
-
-</div>
-
-<div class="apidocSectionDiv">
-<h1><a href="#apidoc.module.npm-scripts-gui.watchConfig" id="apidoc.module.npm-scripts-gui.watchConfig">module npm-scripts-gui.watchConfig</a></h1>
-
-
-    <h2>
-        <a href="#apidoc.element.npm-scripts-gui.watchConfig.watchConfig" id="apidoc.element.npm-scripts-gui.watchConfig.watchConfig">
-        function <span class="apidocSignatureSpan">npm-scripts-gui.</span>watchConfig
-        <span class="apidocSignatureSpan">(watchObj)</span>
-        </a>
-    </h2>
-    <ul>
-    <li>description and source-code<pre class="apidocCodePre">function parseWatchObject(watchObj) {
-	if (!watchObj) return;
-	Object.keys(watchObj).forEach(function (pattern) {
-		createWatcher(pattern.trim(), watchObj[pattern].trim());
-	});
-}</pre></li>
     <li>example usage<pre class="apidocCodePre">n/a</pre></li>
     </ul>
 
