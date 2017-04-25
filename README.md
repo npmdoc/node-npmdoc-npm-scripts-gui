@@ -1,6 +1,7 @@
 # npmdoc-npm-scripts-gui
 
-api documentation for  [npm-scripts-gui (v0.0.24)](https://github.com/samueleaton/npm-scripts-gui#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-npm-scripts-gui.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-npm-scripts-gui) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-scripts-gui.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-scripts-gui)
+#### basic api documentation for  [npm-scripts-gui (v0.0.24)](https://github.com/samueleaton/npm-scripts-gui#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-npm-scripts-gui.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-npm-scripts-gui) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-npm-scripts-gui.svg)](https://travis-ci.org/npmdoc/node-npmdoc-npm-scripts-gui)
+
 #### GUI for npm scripts
 
 [![NPM](https://nodei.co/npm/npm-scripts-gui.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/npm-scripts-gui)
